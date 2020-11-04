@@ -4,6 +4,9 @@ const port = 3000
 app.listen(3000, () => console.log("keraa tietoa"));
 app.use(express.static("public"));
 
+app.use(express.json({limit: '1mb'}));
+
+
 console.log("tacobell")
 
 const pankki = [
@@ -23,5 +26,11 @@ const pankki = [
 ]
 
 app.get('/buffbank', function (req, res) {
-  res.send(pankki)
+  res.send('pankki')
+})
+
+app.post('/buffbank', function (req, res) {
+pankki.push(req.body);
+console.log(pankki);
+  res.send(200);
 })
