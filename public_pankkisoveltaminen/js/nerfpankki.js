@@ -1,6 +1,6 @@
 function nerf_pankki() {
  var nimi = document.getElementById("name").value;
-var pin = document.getElementById("pin").value;
+var pingviini = document.getElementById("pingviini").value;
 
 console.log(nimi);
 console.log(pingviini);
@@ -20,7 +20,7 @@ body: JSON.stringify(data)
 };
 
 
-fetch('/muumi', options).then(function(response) {
+fetch('/buffbank', options).then(function(response) {
 if(response.status == 200){
 console.log("okBoomer");
 
@@ -33,31 +33,11 @@ console.log(error.message);
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-function katsokuvat() {
-
-
-
 }
 
 async function nouda(){
 
-const response = await fetch("/buffbank");
+const response = await fetch("/pingviini");
 const data = await response.json();
 console.log(data);
 
