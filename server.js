@@ -25,6 +25,21 @@ const pankki = [
 
 ]
 
+const paikkatiedot = [
+{
+"latitude": "61",
+"longitude": "23",
+"orja": "ööööö",
+"arvostelu": "ok",
+"arvostelija": "henkilö"
+}
+]
+
+app.get('/haeviaerailut', function (req, res) {
+  res.send('paikkatiedot')
+})
+
+
 app.get('/buffbank', function (req, res) {
   res.send('pankki')
 })
