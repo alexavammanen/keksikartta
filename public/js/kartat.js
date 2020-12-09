@@ -45,7 +45,7 @@ for (i = 0; i < data.length; i++)
 
 L.marker([data[i].latitude, data[i].longitude]).addTo(map).bindPopup(data[i].paikka + "<br>" + data[i].arvostelu).openPopup();
 
-/ Find a <table> element with id="myTable":
+// Find a <table> element with id="myTable":
 var table = document.getElementById("myTable");
 
 // Create an empty <tr> element and add it to the 1st position of the table:
