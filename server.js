@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
 const port = 3000
-app.listen(3000, () => console.log("keraa tietoa"));
+//app.listen(3000, () => console.log("keraa tietoa"));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log("kuuntelen porttia " + port));
+
 app.use(express.static("public"));
 
 app.use(express.json({limit: '1mb'}));

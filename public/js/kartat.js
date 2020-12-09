@@ -38,9 +38,28 @@ const response = await fetch("/haeviaerailut");
 const data = await response.json();
 console.log(data);
 
-L.marker([data[0].latitude, data[0].longitude]).addTo(map)
-.bindPopup(data[0].paikka + "<br>" + data[0].arvostelu)
-.openPopup();
+
+
+var i;
+for (i = 0; i < data.length; i++)
+
+L.marker([data[i].latitude, data[i].longitude]).addTo(map).bindPopup(data[i].paikka + "<br>" + data[i].arvostelu).openPopup();
+
+/ Find a <table> element with id="myTable":
+var table = document.getElementById("myTable");
+
+// Create an empty <tr> element and add it to the 1st position of the table:
+var row = table.insertRow(1 + i);
+
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+var cell2 = row.insertCell(2);
+
+// Add some text to the new cells:
+cell1.innerHTML = "data[i].orja";
+cell2.innerHTML = "data[i].arvostelu";
+cell2.innerHTML = "data[i].arvostelija";
 }
 
 function tallenna_sijainti() {

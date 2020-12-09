@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/alexavammanen/keksikartta#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "expres": "0.0.5",
+    "express": "^4.17.1",
+    "heroku": "^7.47.4"
   }
 }
